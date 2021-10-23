@@ -11,6 +11,7 @@ io.on('connection', (socket) => {
   socket.on('join-room', (roomId, userDetails) => {
     // adding all user to a room so that we can broadcast messages
     socket.join(roomId);
+    console.log("joined")
 
     // adding map users to room
     if (users[roomId]) {
@@ -66,4 +67,4 @@ io.on('connection', (socket) => {
   });
 });
 
-server.listen(3001);
+server.listen(5000);
